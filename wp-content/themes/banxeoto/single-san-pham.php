@@ -38,7 +38,7 @@
 							<div class="border">
 								<b class="name"><?php the_title(); ?></b>
 								<p><b>Giá:</b> 
-									<?php if(get_field('gia_tien')) { the_field('gia_tien'); } else{ echo 'Liên hệ'; }   ?>
+								<?php if(get_field('gia_tien')) { echo number_format(get_field('gia_tien')); } else{ echo 'Liên hệ'; }   ?>
 								</p>
 								<p><b>Số chỗ: </b><?php the_field('cho_ngoi') ?> Chổ</p>
 								<p><b>Thương hiệu:</b> <?php the_field('thuong_hieu') ?></p>
@@ -88,7 +88,7 @@
 													<div class="info-product">
 														<a class="name" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 														<p class="price"> <b><i class="fas fa-tag"></i>Giá:</b> 
-															<?php if(get_field('gia_tien')) { the_field('gia_tien'); } else{ echo 'Liên hệ'; }   ?>
+														<?php if(get_field('gia_tien')) { echo number_format(get_field('gia_tien')); } else{ echo 'Liên hệ'; }   ?>
 														</p>
 														<p><b><i class="fab fa-accessible-icon"></i>Số chỗ: </b><?php the_field('cho_ngoi') ?> Chổ</p>
 														<p><b><i class="fas fa-car"></i>Thương hiệu:</b> <?php the_field('thuong_hieu') ?></p>
@@ -132,7 +132,7 @@
 						<div class="col-8">
 							<p> <b class="name"><?php the_title(); ?></b></p>
 							<p class="price"> <b>Giá:</b> 
-								<?php if(get_field('gia_tien')) { the_field('gia_tien'); } else{ echo 'Liên hệ'; } ?>
+							<?php if(get_field('gia_tien')) { echo number_format(get_field('gia_tien')); } else{ echo 'Liên hệ'; }   ?>
 							</p>
 							<p><b>Số chỗ: </b><?php the_field('cho_ngoi'); ?> Chổ</p>
 							<p><b>Thương hiệu:</b> <?php the_field('thuong_hieu'); ?></p>

@@ -122,37 +122,26 @@
 		<div class="popup-content">
 			<button class="lh-close-2 exit"></button>
 			<p class="title">Đặt xe</p>
-			<form action="">
-				<div class="info-car">
-					<p class="box-title">Thông tin xe</p>
-					<div class="row">
-						<div class="col-4">
-							<img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); ?>" alt="<?php the_title(); ?>">
-						</div>
-						<div class="col-8">
-							<p> <b class="name"><?php the_title(); ?></b></p>
-							<p class="price"> <b>Giá:</b> 
-							<?php if(get_field('gia_tien')) { echo number_format(get_field('gia_tien')); } else{ echo 'Liên hệ'; }   ?>
-							</p>
-							<p><b>Số chỗ: </b><?php the_field('cho_ngoi'); ?> Chổ</p>
-							<p><b>Thương hiệu:</b> <?php the_field('thuong_hieu'); ?></p>
-						</div>
-					</div>
-				</div>
-				<p class="box-title">Thông tin khách hàng</p>
-				<input type="" name="" placeholder="Họ và tên *">
+			
+			<div class="info-car">
+				<p class="box-title">Thông tin xe</p>
 				<div class="row">
-					<div class="col-6">
-						<input type="" name="" placeholder="Email *">
+					<div class="col-4">
+						<img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); ?>" alt="<?php the_title(); ?>">
 					</div>
-					<div class="col-6">
-						<input type="" name="" placeholder="Điện thoại *">
+					<div class="col-8">
+						<p> <b class="name"><?php the_title(); ?></b></p>
+						<p class="price"> <b>Giá:</b> 
+						<?php if(get_field('gia_tien')) { echo number_format(get_field('gia_tien')); } else{ echo 'Liên hệ'; }   ?>
+						</p>
+						<p><b>Số chỗ: </b><?php the_field('cho_ngoi'); ?> Chổ</p>
+						<p><b>Thương hiệu:</b> <?php the_field('thuong_hieu'); ?></p>
 					</div>
 				</div>
-				<div class="text-right">
-					<button class="lh2-button" type="">Đặt xe ngay</button>
-				</div>
-			</form>
+			</div>
+			<p class="box-title">Thông tin khách hàng</p>
+			<?php echo do_shortcode( '[contact-form-7 id="106" title="Form Đặt Xe"]' ); ?>
+			
 		</div>
 	</div>
 	<!-- end popup -->
